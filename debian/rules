@@ -2,14 +2,14 @@
 # -*- makefile -*-
 
 %:
- dh $@
+	dh $@
 
 override_dh_auto_build:
 
 override_dh_auto_install:
- # Manuelles Installieren der Dateien
- mkdir -p debian/webmin-wireguard-manager/usr/share/webmin/wg-manager
- cp -r src/* debian/webmin-wireguard-manager/usr/share/webmin/wg-manager/
- cp -r scripts/* debian/webmin-wireguard-manager/usr/share/webmin/wg-manager/
- chmod +x debian/webmin-wireguard-manager/usr/share/webmin/wg-manager/*.cgi
- chmod +x debian/webmin-wireguard-manager/usr/share/webmin/wg-manager/wg-*
+	# Manuelles Installieren der Dateien
+	mkdir -p debian/webmin-wireguard-manager/usr/share/webmin/wg-manager
+	cp -r src/* debian/webmin-wireguard-manager/usr/share/webmin/wg-manager/
+	cp -r scripts/* debian/webmin-wireguard-manager/usr/share/webmin/wg-manager/
+	chmod +x debian/webmin-wireguard-manager/usr/share/webmin/wg-manager/*.cgi
+	chmod +x debian/webmin-wireguard-manager/usr/share/webmin/wg-manager/wg-*
