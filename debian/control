@@ -1,0 +1,24 @@
+Source: webmin-wireguard-manager
+Section: admin
+Priority: optional
+Maintainer: Reiner Hagn <df9ry@github>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.2
+Homepage: https://github.com/df9ry/wg-manager-webmin
+Vcs-Browser: https://github.com/df9ry/wg-manager-webmin
+Vcs-Git: https://github.com/df9ry/wg-manager-webmin.git
+
+Package: webmin-wireguard-manager
+Architecture: all
+Depends: webmin, wireguard, ${misc:Depends}
+Description: WebMin plugin for WireGuard client management
+ A user-friendly WebMin plugin for managing WireGuard VPN clients.
+ Features include:
+  * Add/remove WireGuard clients
+  * IPv4 and IPv6 support
+  * Automatic key generation
+  * Client configuration export
+  * Clean web interface integrated into WebMin
+ .
+ This plugin simplifies WireGuard client management through
+ WebMin's web interface without compromising security.

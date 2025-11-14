@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "richterger.perl",
+    "mads-hartmann.bash-ide",
+    "ecmel.vscode-html-css",
+    "timonwong.shellcheck",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode"
+  ]
+}

@@ -1,0 +1,6 @@
+#!/bin/bash
+# /usr/share/webmin/wg-manager/wg-removeclient
+# Platzhalter - bauen wir später
+
+echo "Lösch-Funktion kommt noch..."
+exit 1

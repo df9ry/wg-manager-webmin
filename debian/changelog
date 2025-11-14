@@ -1,0 +1,6 @@
+webmin-wireguard-manager (1.0-1) unstable; urgency=medium
+
+  * Initial release of WebMin WireGuard Manager
+  * Features: Client creation, deletion, IPv4/IPv6 support
+
+ -- Reiner Hagn <df9ry@github>  $(date -R)

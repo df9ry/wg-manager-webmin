@@ -1,0 +1,26 @@
+name: Build Debian Package
+
+on:
+  push:
+    tags: ['v*']
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Build Debian Package
+      run: |
+        sudo apt update
+        sudo apt install -y devscripts debhelper dh-make
+        make deb
+        
+    - name: Upload Package
+      uses: actions/upload-artifact@v3
+      with:
+        name: webmin-wireguard-manager
+        path: ../webmin-wireguard-manager_*.deb

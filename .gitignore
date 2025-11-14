@@ -1,0 +1,16 @@
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*~
+
+# WebMin specific
+/config
+/.miniserv.*
+
+# Local development
+/.vscode/settings.json
+/.vscode/launch.json
+
+# System files
+/etc/wireguard/
