@@ -1,11 +1,31 @@
 #!/usr/bin/perl
-# /usr/share/webmin/wg-manager/index.cgi
+#
+# WebMin WireGuard Manager - Client management for WireGuard VPN
+# Copyright (C) 2024 Reiner Hagn (df9ry)
+# Copyright (C) 2024 DeepSeek AI
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 use strict;
 use warnings;
-use WebminCore;
 
-# WebMin Initialisierung
+# WebMin Core Pfad hinzufügen
+BEGIN {
+    unshift @INC, '/usr/share/webmin';
+}
+
+use WebminCore;
 init_config();
 our %access = &get_module_acl();
 
@@ -130,9 +150,7 @@ sub parse_wg_clients {
     my $wg_conf = '/etc/wireguard/wg0.conf';
     
     if (open(my $fh, '<', $wg_conf)) {
-
-Reiner Hagn, [14.11.25 16:39]
-my $current_client;
+        my $current_client;
         while (my $line = <$fh>) {
             if ($line =~ /^#\s*(.+)$/) {
                 $current_client = { name => $1 };
